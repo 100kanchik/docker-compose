@@ -5,4 +5,4 @@ RUN git clone https://github.com/boxfuse/boxfuse-sample-java-war-hello.git
 WORKDIR /usr/local/boxfuse-sample-java-war-hello/
 RUN  mvn package
 WORKDIR /usr/local/webapps/
-RUN cp ./target/hello-1.0.war /usr/local/tomcat/webapps/ && cp -r ./target/hello-1.0 /usr/local/tomcat/webapps/hello-1.0
+RUN cp /usr/local/boxfuse-sample-java-war-hello/target/hello-1.0.war . && cp -r /usr/local/boxfuse-sample-java-war-hello/ ./boxfuse-sample-java-war-hello
