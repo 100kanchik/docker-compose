@@ -3,4 +3,13 @@ services:
   maven:
     build: ./maven
     volumes:
+      - web-dir:/usr/local/webapps
+  web:
+    build: ./prod
+    volumes:
+      - web-dir:/usr/local/maven
+volumes:
+  web-dir:
+
+
         
